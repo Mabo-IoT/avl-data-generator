@@ -1,4 +1,4 @@
-version: "3.6"
+version: "3.3"
 services:
   ziyan:
     image: "10.7.0.117:9095/mabo_group/base_application/doctopus_ziyan:latest"
@@ -6,8 +6,8 @@ services:
     # restart: always
     working_dir: /usr/mabo/ziyan
     command: python  manage.py -t ziyan
-    depends_on: 
-      - redis
+#    depends_on: 
+#      - redis
     volumes:
       - ./ziyan:/usr/mabo/ziyan
     networks:
